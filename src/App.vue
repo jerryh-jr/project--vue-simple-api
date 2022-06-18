@@ -14,14 +14,24 @@ onBeforeMount(async () => {
   ditto.value = await request.json();
   console.log('Ditto', toRaw(ditto.value));
 });
+
 </script>
 
 <template>
   <SiteHeader />
   
   <RouterView />
-  
+
   <main class="main--container">
+  
+  <div>
+    <p class="router--links">
+      <router-link to="/home">Home</router-link>
+
+      <router-link to="/about">About</router-link>
+    </p>
+  </div>
+
     <h1 class="pokemon--name">{{ ditto.name }}</h1>
 
     <h2>Abilities</h2>
@@ -52,5 +62,10 @@ onBeforeMount(async () => {
   display: grid;
   text-align: center;
 
+}
+
+.router--links {
+  display: flex;
+  justify-content: space-evenly;
 }
 </style>
