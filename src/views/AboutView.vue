@@ -3,6 +3,13 @@
 
 <template>
   <main>
+    <nav class="router--nav">
+      <ul class="router--links">
+        <li><router-link to="/home">Home</router-link></li>
+        <li><router-link to="/about">About</router-link></li>
+      </ul>
+    </nav>
+
     <section>
         <h2 class="about--project">The reason I created this site.</h2>
         <p class="about--text">
@@ -21,11 +28,15 @@
 
 <style>
 
+*::after {
+    background-color: lightslategrey;
+}
 main {
     margin: 0;
     padding: 0;
     display: absolute;
     text-align: center;
+    
 }
 
 h2 {
